@@ -1,0 +1,64 @@
+
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body style="direction:rtl">
+  <div class="navBar">
+    <div class="site-nav">
+      <ul class="group">
+        <li class="dropdown small">
+          <a><i class="fa fa-bars" style="color:white" aria-hidden="true"></i></a>
+          <div class="dropdown-content">
+            <a><i class="fa fa-sign-in" aria-hidden="true"></i>התחברות</a>
+            <a><i class="fa fa-shopping-cart" aria-hidden="true"></i>ההזמנות שלי</a>
+            <a><i class="fa fa-ticket" aria-hidden="true"></i>המחירון שלי</a>
+            <a><i class="fa fa-user" aria-hidden="true"></i>עדכון פרטים</a>
+            <a><i class="fa fa-lock" aria-hidden="true"></i>איפוס סיסמא</a>
+            <a><i class="fa fa-question-circle" aria-hidden="true"></i>FAQ</a>
+          </div>
+        </li>
+        <li class="dropdown big"><a><i class="fa fa-sign-in" aria-hidden="true"></i>התחברות</a></li>
+        <li class="dropdown big"><a><i class="fa fa-shopping-cart" aria-hidden="true"></i>ההזמנות שלי</a></li>
+        <li class="dropdown big"><a><i class="fa fa-ticket" aria-hidden="true"></i>המחירון שלי</a></li>
+        <li class="dropdown big"><a><i class="fa fa-user" aria-hidden="true"></i>עדכון פרטים</a></li>
+        <li class="dropdown big"><a><i class="fa fa-lock" aria-hidden="true"></i>איפוס סיסמא</a></li>
+        <li class="dropdown big"><a><i class="fa fa-question-circle" aria-hidden="true"></i>FAQ</a></li>
+
+      </ul>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <div class="main" style="direction:ltr">
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Website</th>
+          <th>Company</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let item of data">
+        <td data-label="Id">{{item.id}}</td>
+        <td data-label="Username">{{item.username}}</td>
+        <td data-label="Email"><a style="cursor:pointer;">{{item.email}}</a></td>
+        <td data-label="Address">{{item.address.street}}, {{item.address.city}}</td>
+        <td data-label="Phone">{{item.phone}}</td>
+        <td data-label="Website">{{item.website}}</td>
+        <td data-label="Company">{{item.company.name}}</td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+<script>
+
+</script>
